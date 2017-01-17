@@ -4,7 +4,7 @@
 #
 Name     : gc
 Version  : 7_6_0
-Release  : 7
+Release  : 8
 URL      : https://github.com/ivmai/bdwgc/archive/gc7_6_0.tar.gz
 Source0  : https://github.com/ivmai/bdwgc/archive/gc7_6_0.tar.gz
 Summary  : A garbage collector for C and C++
@@ -54,8 +54,8 @@ lib components for the gc package.
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1484672569
-%autogen --disable-static
+export SOURCE_DATE_EPOCH=1484673032
+%autogen --disable-static --enable-cplusplus
 make V=1  %{?_smp_mflags}
 
 %check
@@ -119,6 +119,7 @@ rm -rf %{buildroot}
 /usr/include/gc/gc_allocator.h
 /usr/include/gc/gc_backptr.h
 /usr/include/gc/gc_config_macros.h
+/usr/include/gc/gc_cpp.h
 /usr/include/gc/gc_disclaim.h
 /usr/include/gc/gc_gcj.h
 /usr/include/gc/gc_inline.h
@@ -132,6 +133,7 @@ rm -rf %{buildroot}
 /usr/include/gc/weakpointer.h
 /usr/lib64/libcord.so
 /usr/lib64/libgc.so
+/usr/lib64/libgccpp.so
 /usr/lib64/pkgconfig/bdw-gc.pc
 
 %files lib
@@ -140,3 +142,5 @@ rm -rf %{buildroot}
 /usr/lib64/libcord.so.1.0.3
 /usr/lib64/libgc.so.1
 /usr/lib64/libgc.so.1.0.3
+/usr/lib64/libgccpp.so.1
+/usr/lib64/libgccpp.so.1.0.3
