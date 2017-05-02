@@ -4,7 +4,7 @@
 #
 Name     : gc
 Version  : 7_6_0
-Release  : 8
+Release  : 9
 URL      : https://github.com/ivmai/bdwgc/archive/gc7_6_0.tar.gz
 Source0  : https://github.com/ivmai/bdwgc/archive/gc7_6_0.tar.gz
 Summary  : A garbage collector for C and C++
