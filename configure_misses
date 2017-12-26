@@ -1,0 +1,5 @@
+Configure miss: xlc
+Configure miss: whether Solaris gcc optimization fix is necessary
+Configure miss: sys/dg_sys_info.h usability
+Configure miss: sys/dg_sys_info.h presence
+Configure miss: sys/dg_sys_info.h
