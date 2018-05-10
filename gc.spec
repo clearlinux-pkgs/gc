@@ -4,7 +4,7 @@
 #
 Name     : gc
 Version  : 7.6.4
-Release  : 12
+Release  : 13
 URL      : https://github.com/ivmai/bdwgc/releases/download/v7.6.4/gc-7.6.4.tar.gz
 Source0  : https://github.com/ivmai/bdwgc/releases/download/v7.6.4/gc-7.6.4.tar.gz
 Summary  : A garbage collector for C and C++
