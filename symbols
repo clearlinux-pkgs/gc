@@ -41,6 +41,7 @@ libcord.so.1:CORD_to_const_char_star
 libcord.so.1:CORD_vfprintf
 libcord.so.1:CORD_vprintf
 libcord.so.1:CORD_vsprintf
+libgc.so.1:GC_abort_on_oom
 libgc.so.1:GC_add_roots
 libgc.so.1:GC_allow_register_threads
 libgc.so.1:GC_atfork_child
@@ -262,6 +263,7 @@ libgc.so.1:GC_try_to_collect
 libgc.so.1:GC_unregister_disappearing_link
 libgc.so.1:GC_unregister_long_link
 libgc.so.1:GC_unregister_my_thread
+libgccpp.so.1:_Z18GC_throw_bad_allocv
 libgccpp.so.1:_ZdaPv
 libgccpp.so.1:_ZdaPvm
 libgccpp.so.1:_ZdlPv
