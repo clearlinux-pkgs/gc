@@ -4,7 +4,7 @@
 #
 Name     : gc
 Version  : 8.0.4
-Release  : 18
+Release  : 19
 URL      : https://github.com/ivmai/bdwgc/releases/download/v8.0.4/gc-8.0.4.tar.gz
 Source0  : https://github.com/ivmai/bdwgc/releases/download/v8.0.4/gc-8.0.4.tar.gz
 Summary  : A garbage collector for C and C++
@@ -48,33 +48,34 @@ lib components for the gc package.
 
 %prep
 %setup -q -n gc-8.0.4
+cd %{_builddir}/gc-8.0.4
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1561065862
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1604357334
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
 export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
 export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 %autogen --disable-static --enable-cplusplus
 make  %{?_smp_mflags}
 
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-make VERBOSE=1 V=1 %{?_smp_mflags} check
+make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1561065862
+export SOURCE_DATE_EPOCH=1604357334
 rm -rf %{buildroot}
 %make_install
 
@@ -83,7 +84,7 @@ rm -rf %{buildroot}
 
 %files dev
 %defattr(-,root,root,-)
-/usr/include/*.h
+/usr/include/gc.h
 /usr/include/gc/cord.h
 /usr/include/gc/cord_pos.h
 /usr/include/gc/ec.h
@@ -101,6 +102,7 @@ rm -rf %{buildroot}
 /usr/include/gc/gc_version.h
 /usr/include/gc/javaxfc.h
 /usr/include/gc/leak_detector.h
+/usr/include/gc_cpp.h
 /usr/lib64/libcord.so
 /usr/lib64/libgc.so
 /usr/lib64/libgccpp.so
