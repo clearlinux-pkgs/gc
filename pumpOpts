@@ -1,1 +1,1 @@
-special_releases = pre
+regex_ban = ^7\.2[a-z]
