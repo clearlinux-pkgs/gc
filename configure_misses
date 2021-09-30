@@ -1,6 +1,5 @@
-Configure miss: xlc
-Configure miss: whether Solaris gcc optimization fix is necessary
-Configure miss: sys/dg_sys_info.h usability
-Configure miss: sys/dg_sys_info.h presence
+Configure miss: g++ option to enable C++11 features
 Configure miss: sys/dg_sys_info.h
+Configure miss: whether AIX gcc optimization fix is necessary
 Configure miss: which libatomic_ops to use
+Configure miss: xlc
